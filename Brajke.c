@@ -4,6 +4,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <errno.h>
+#include <dirent.h>
+#include <time.h>
 
 /*
   Function Declarations for builtin shell commands:
@@ -11,7 +14,9 @@
 int lsh_cd(char **args);
 int lsh_help(char **args);
 int lsh_exit(char **args);
-void ls(char **args)
+int cat(int argc, char **argv);
+int shutdown(char **args);
+int sleep(char **args);
 /*
   List of builtin commands, followed by their corresponding functions.
  */
