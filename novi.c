@@ -13,7 +13,6 @@ int lsh_help(char **args);
 int lsh_exit(char **args);
 int cat(int argc, char **argv);
 int shutdown(char **args);
-int sleep(char **args);
 /*
   List of builtin commands, followed by their corresponding functions.
  */
@@ -100,12 +99,6 @@ int shutdown(char **args)
    system("shutdown -P now");
    
    return 0;
-}
-int sleep(char **args)
-{
-  printf("Sleeping for 5 sec.\n");
-  sleep(5);
-  return 0;
 }
 
 /**
